@@ -28,11 +28,11 @@ Just include it in your app like this:
 
 	<script src="browser.console.mirror.js"></script>
 	<!-- Make sure to include Socket.io before calling the init method. -->
-	<script>
-    consoleMirroring.init({
-       socketLib: socket,
-       containerId: '#console' 
-    });
+	<script type="text/javascript">
+        consoleMirroring.init({
+           socketLib: socket,
+           containerId: '#console' 
+        });
 	</script>
 
 
