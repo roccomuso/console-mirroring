@@ -1,0 +1,27 @@
+{
+  "name": "console-mirroring",
+  "version": "1.0.0",
+  "description": "Real-time console mirroring on a web page.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://roccomuso@github.com/roccomuso/console-mirroring.git"
+  },
+  "keywords": [
+    "console",
+    "mirroring",
+    "log",
+    "logs",
+    "mirror",
+    "socket"
+  ],
+  "author": "Rocco Musolino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roccomuso/console-mirroring/issues"
+  },
+  "homepage": "https://github.com/roccomuso/console-mirroring#readme"
+}
