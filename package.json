@@ -2,7 +2,7 @@
   "name": "console-mirroring",
   "version": "1.0.0",
   "description": "Real-time console mirroring on a web page.",
-  "main": "app.js",
+  "main": "console.mirroring.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

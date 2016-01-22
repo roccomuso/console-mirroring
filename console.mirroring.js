@@ -15,7 +15,6 @@ module.exports = function(io){
 
 	function replace_handler(method){
 		return function(){
-			// TODO
 			var args = Array.prototype.slice.call(arguments);
 			var args = Array.prototype.slice.call(arguments);
 			var args_concat = args.map(function(elem){
