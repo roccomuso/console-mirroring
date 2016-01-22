@@ -10,33 +10,47 @@ The app.js extends in your node app some console functions:
 
 Every function extended got his own color on the web page UI.
 
-Just include it in your app like this:
+## Install
 
-    require('console-mirroring');
+    npm install console-mirroring --save
 
-    // Will be sent
+## Use
+
+Just include it in your app passing a socket.io reference, like this:
+
+    var app = require('express')();
+    var server = require('http').Server(app);
+    var io = require('socket.io')(server);
+    require('console-mirroring')(io);
+
+    // Every console.* will be sent to the client web UI.
     console.log('Hello World'); // white
     console.info('Hello World'); // blue
     console.warn('Hello World'); // orange
     console.error('Hello World'); // red
 
-## Install
 
-    npm install console-mirroring --save
+## Client side
 
-## Init on browser
-
+    <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
 	<script src="browser.console.mirror.js"></script>
-	<!-- Make sure to include Socket.io before calling the init method. -->
-	<script type="text/javascript">
-        consoleMirroring.init({
-           socketLib: socket,
-           containerId: '#console' 
+
+    <script type="text/javascript">
+        var socket = io.connect('http://' + location.host, {
+            'reconnect': true,
+            'reconnection delay': 50,
+            'max reconnection attempts': 300
         });
-	</script>
+    
+        // Make sure to pass a valid socket.io obj to the init method.
+        consoleMirroring.init({
+            socketLib: socket,
+            containerId: '#console' 
+        });
+    </script>
 
 
-### dependencies
+### Dependencies
 
 - Socket.io
 
