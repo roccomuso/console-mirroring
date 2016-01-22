@@ -12,7 +12,7 @@ Every function extended got his own color on the web page UI.
 
 Just include it in your app like this:
 
-    require('console-mirror');
+    require('console-mirroring');
 
     // Will be sent
     console.log('Hello World'); // white
@@ -22,17 +22,18 @@ Just include it in your app like this:
 
 ## Install
 
-    npm install console-mirror --save
+    npm install console-mirroring --save
 
 ## Init on browser
 
 	<script src="browser.console.mirror.js"></script>
 	<!-- Make sure to include Socket.io before calling the init method. -->
 	<script>
-
+    consoleMirroring.init({
+       socketLib: socket,
+       containerId: '#console' 
+    });
 	</script>
-
-##
 
 
 ### dependencies
