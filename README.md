@@ -47,7 +47,9 @@ Just include it in your app passing a socket.io reference, like this:
         // Make sure to pass a valid socket.io obj to the init method.
         consoleMirroring.init({
             socketLib: socket,
-            containerId: '#console' 
+            containerId: '#console',
+            fullScreen: true,
+            border: false
         });
     </script>
 
