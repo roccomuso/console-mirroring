@@ -1,6 +1,6 @@
 {
   "name": "console-mirroring",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Real-time console mirroring on a web page.",
   "main": "console.mirroring.js",
   "scripts": {
