@@ -2,11 +2,11 @@ This project aims to provide a Real-time console mirroring on a web page.
 
 ### How it works
 
-The app.js extends in your node app some console functions:
-- console.log
-- console.info
-- console.warn
-- console.error
+This module extends in your node app some console functions:
+- <code>console.log</code>
+- <code>console.info</code>
+- <code>console.warn</code>
+- <code>console.error</code>
 
 Every function extended got his own color on the web page UI.
 
@@ -31,6 +31,8 @@ Just include it in your app passing a socket.io reference, like this:
 
 
 ## Client side
+
+    <div id="#console"></div>
 
     <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
 	<script src="browser.console.mirror.js"></script>
