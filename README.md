@@ -51,6 +51,12 @@ Just include it in your app passing a socket.io reference, like this:
         });
     </script>
 
+#### Optional properties:
+    
+    {
+        fullScreen: true/false,  // false by default
+        border: true/false       // true by default
+    }
 
 ### Dependencies
 
