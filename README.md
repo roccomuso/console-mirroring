@@ -21,6 +21,7 @@ Just include it in your app passing a socket.io reference, like this:
     var app = require('express')();
     var server = require('http').Server(app);
     var io = require('socket.io')(server);
+    server.listen(process.env.PORT || 8080);
     require('console-mirroring')(io);
 
     // Every console.* will be sent to the client web UI.
