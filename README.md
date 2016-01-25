@@ -14,6 +14,8 @@ Every function extended got his own color on the web page UI.
 
     npm install console-mirroring --save
 
+[![NPM](https://nodei.co/npm-dl/console-mirroring.png)](https://nodei.co/npm/console-mirroring/)
+
 ## Use
 
 Just include it in your app passing a socket.io reference, like this:
