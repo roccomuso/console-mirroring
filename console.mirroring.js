@@ -6,7 +6,7 @@ var _methods = [
 ];
 
 module.exports = function(io){
-	
+
 	// save old methods
 	_methods.forEach(function(method){
 		if (method.name in console)
@@ -21,7 +21,7 @@ module.exports = function(io){
 				if (typeof elem === 'object')
 					return JSON.stringify(elem);
 				else
-			    	return elem.toString();
+			    return String(elem);
 			}).join(" ");
 			var data = {color: method.color, text: args_concat};
 			io.emit('logEvent', data);
