@@ -1,3 +1,5 @@
+# console-mirroring
+
 This project aims to provide a Real-time console mirroring on a web page. 
 
 ### How it works
@@ -20,6 +22,7 @@ Every function extended got his own color on the web page UI.
 
 Just include it in your app passing a socket.io reference, like this:
 
+```javascript
     var app = require('express')();
     var server = require('http').Server(app);
     var io = require('socket.io')(server);
@@ -31,10 +34,11 @@ Just include it in your app passing a socket.io reference, like this:
     console.info('Hello World'); // blue
     console.warn('Hello World'); // orange
     console.error('Hello World'); // red
-
+```
 
 ## Client side
 
+```html
     <div id="#console"></div>
 
     <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
@@ -46,7 +50,7 @@ Just include it in your app passing a socket.io reference, like this:
             'reconnection delay': 50,
             'max reconnection attempts': 300
         });
-    
+
         // Make sure to pass a valid socket.io obj to the init method.
         consoleMirroring.init({
             socketLib: socket,
@@ -55,13 +59,16 @@ Just include it in your app passing a socket.io reference, like this:
             border: false
         });
     </script>
+```
 
 #### Optional properties:
-    
+
+```javascript
     {
         fullScreen: true/false,  // false by default
         border: true/false       // true by default
     }
+```
 
 ### Dependencies
 
@@ -69,4 +76,8 @@ Just include it in your app passing a socket.io reference, like this:
 
 ### Author
 
-Rocco Musolino (MIT License) - HackersTribe.com
+Rocco Musolino [@roccomuso](https://twitter.com/roccomuso)
+
+### License
+
+MIT
